@@ -1,0 +1,6 @@
+{
+  "name": "EcoSonic 3.0",
+  "description": "Live environmental sound intelligence platform for acoustic species observation, soundscape fingerprint analysis, and disturbance detection.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
