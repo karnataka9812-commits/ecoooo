@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-forest-950: #101C17;
+  --color-forest-900: #18271F;
+  --color-forest-800: #243B2E;
+  --color-moss-500: #788B68;
+  --color-lichen-200: #D5D9C6;
+  --color-ivory-100: #EEEBDD;
+  --color-stone-400: #A5AC9C;
+  --color-amber-400: #D3A36C;
+}
+
+:root {
+  --app-bg: #101C17;
+  --app-surface: #18271F;
+  --app-surface-elevated: #243B2E;
+  --app-border: rgba(213, 217, 198, 0.14);
+  --app-border-strong: rgba(213, 217, 198, 0.24);
+  --app-text: #EEEBDD;
+  --app-text-secondary: #D5D9C6;
+  --app-text-muted: #A5AC9C;
+  --app-accent: #788B68;
+  --app-amber: #D3A36C;
+}
+
+[data-theme="field-light"] {
+  --app-bg: #EEEBDD;
+  --app-surface: #E5E1D0;
+  --app-surface-elevated: #D5D9C6;
+  --app-border: rgba(16, 28, 23, 0.14);
+  --app-border-strong: rgba(16, 28, 23, 0.24);
+  --app-text: #101C17;
+  --app-text-secondary: #243B2E;
+  --app-text-muted: #4A594E;
+  --app-accent: #4E6142;
+  --app-amber: #9E6B30;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle natural paper/grain atmospheric texture for editorial sections */
+.bg-natural-grain {
+  background-image: radial-gradient(rgba(213, 217, 198, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bg-ivory-grain {
+  background-image: radial-gradient(rgba(16, 28, 23, 0.045) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
